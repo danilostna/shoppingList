@@ -1,4 +1,4 @@
-package br.com.santana.shoppingList.dto;
+package br.com.santana.shoppingList.dto.product;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductDTO {
+public class ProductAllDTO {
     private Long id;
 
     @NotNull

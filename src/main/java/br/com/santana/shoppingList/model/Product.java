@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "PRODUCT")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,14 +15,15 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "NAME", nullable = false, unique = true)
     private String name;
 
-    @Column(nullable = false)
+    @Column(name = "MAX_STOCK", nullable = false)
     private int maxStock;
 
-    @Column(nullable = false)
+    @Column(name = "QUANTITY_STOCK", nullable = false)
     private int quantityStock;
 }
